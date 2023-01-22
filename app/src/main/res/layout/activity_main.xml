@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/weightID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/weight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/enteredweight"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="15dp"
+        android:ems="10"
+        android:hint="@string/enterWeight"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@+id/weightID"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/weightID"
+        app:layout_constraintTop_toTopOf="@+id/weightID" />
+
+    <TextView
+        android:id="@+id/gentertestID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/gender"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enteredweight" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupGenderID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/gentertestID"
+        app:layout_constraintStart_toEndOf="@+id/gentertestID"
+        app:layout_constraintTop_toTopOf="@+id/gentertestID">
+
+        <RadioButton
+            android:id="@+id/radioButtonfemale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/female" />
+
+        <RadioButton
+            android:id="@+id/radioButtonmale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/male" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/setweightID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/set_weight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupGenderID" />
+
+    <TextView
+        android:id="@+id/weightViewID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/weights"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setweightID" />
+
+    <TextView
+        android:id="@+id/drinkzieID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/drinkssize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weightViewID" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupdrinksID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/drinkzieID"
+        app:layout_constraintStart_toEndOf="@+id/drinkzieID"
+        app:layout_constraintTop_toTopOf="@+id/drinkzieID">
+
+        <RadioButton
+            android:id="@+id/radioButton1oz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:clickable="true"
+            android:text="@string/one_oz" />
+
+        <RadioButton
+            android:id="@+id/radioButton5oz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/five_oz" />
+
+        <RadioButton
+            android:id="@+id/radioButton12oz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ten_oz" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textViewaalcoholID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/alcohol"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupdrinksID" />
+
+    <SeekBar
+        android:id="@+id/seekBarID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:max="30"
+        android:progress="12"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewaalcoholID"
+        app:layout_constraintEnd_toStartOf="@+id/textViewVlueSeekPercen"
+        app:layout_constraintStart_toEndOf="@+id/textViewaalcoholID"
+        app:layout_constraintTop_toTopOf="@+id/textViewaalcoholID" />
+
+    <TextView
+        android:id="@+id/textViewVlueSeekPercen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/value"
+        app:layout_constraintBottom_toBottomOf="@+id/seekBarID"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/seekBarID" />
+
+    <Space
+        android:id="@+id/space"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarID" />
+
+    <Button
+        android:id="@+id/resetID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/reset"
+        app:layout_constraintEnd_toStartOf="@+id/space"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewaalcoholID" />
+
+    <Button
+        android:id="@+id/addDrinkID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/adddrinks"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/space"
+        app:layout_constraintTop_toTopOf="@+id/resetID" />
+
+    <TextView
+        android:id="@+id/drinksVlaueID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/drinks"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resetID" />
+
+    <TextView
+        android:id="@+id/BAClevelID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/baclevel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/drinksVlaueID" />
+
+    <Space
+        android:id="@+id/space2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BAClevelID" />
+
+    <TextView
+        android:id="@+id/statusID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/youresafe"
+        app:layout_constraintEnd_toEndOf="@+id/space2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BAClevelID" />
+
+    <View
+        android:id="@+id/viewStatusID"
+        android:layout_width="189dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="10dp"
+        android:background="#009688"
+        app:layout_constraintBottom_toBottomOf="@+id/statusID"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/space2"
+        app:layout_constraintTop_toTopOf="@+id/statusID" />
+
+    <TextView
+        android:id="@+id/statusValuesID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/safe"
+        app:layout_constraintBottom_toBottomOf="@+id/viewStatusID"
+        app:layout_constraintEnd_toEndOf="@+id/viewStatusID"
+        app:layout_constraintStart_toStartOf="@+id/viewStatusID"
+        app:layout_constraintTop_toTopOf="@+id/viewStatusID" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

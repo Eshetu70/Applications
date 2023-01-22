@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">LevelBAC</string>
+    <string name="weight">Weight:</string>
+    <string name="gender">Gender</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
+    <string name="set_weight">Set Weight</string>
+    <string name="weights">Weight:</string>
+    <string name="drinkssize">Drink size:</string>
+    <string name="one_oz">1 0z</string>
+    <string name="five_oz">5 0z</string>
+    <string name="ten_oz">12 oz</string>
+    <string name="alcohol">Alcohol %:</string>
+    <string name="drinks"># Drinks: 0</string>
+    <string name="baclevel">BAC Level: 0.000</string>
+    <string name="youresafe">Your Status:</string>
+    <string name="safe">You\'re Safe</string>
+    <string name="reset">Reset</string>
+    <string name="adddrinks">Add Drink</string>
+    <string name="enterWeight">Enter Weight</string>
+    <string name="value">12%</string>
+</resources>
